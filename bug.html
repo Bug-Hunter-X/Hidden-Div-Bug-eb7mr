@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+
+  <script>
+    // Incorrect use of getElementsByTagName - returns a NodeList, not a single element
+    document.getElementsByTagName("div")[0].style.display = "none"; 
+    
+    // The correct way to access the element should be done by id
+    //document.getElementById("myDiv").style.display = "none";
+  </script>
+</body>
+</html>
